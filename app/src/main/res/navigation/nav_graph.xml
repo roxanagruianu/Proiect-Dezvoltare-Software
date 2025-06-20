@@ -18,4 +18,9 @@
         android:id="@+id/registerFragment"
         android:name="com.example.myapplication.ui.fragments.RegisterFragment"
         android:label="Register" />
+
+    <fragment
+        android:id="@+id/mainPageFragment"
+        android:name="com.example.myapplication.ui.fragments.MainPageFragment"
+        android:label="Main Page" />
 </navigation>

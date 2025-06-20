@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/editTextRegisterEmailAddress"
         android:layout_width="261dp"
         android:layout_height="48dp"
         android:layout_marginStart="72dp"
@@ -30,7 +30,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/editTextRegisterPassword"
         android:layout_width="261dp"
         android:layout_height="48dp"
         android:layout_marginStart="72dp"
@@ -44,7 +44,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/registerButton"
         android:layout_width="145dp"
         android:layout_height="48dp"
         android:layout_marginStart="132dp"
@@ -77,7 +77,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/editTextRegisterFirstName"
         android:layout_width="261dp"
         android:layout_height="48dp"
         android:layout_marginStart="72dp"
@@ -91,7 +91,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextText2"
+        android:id="@+id/editTextRegisterLastName"
         android:layout_width="261dp"
         android:layout_height="48dp"
         android:layout_marginStart="72dp"

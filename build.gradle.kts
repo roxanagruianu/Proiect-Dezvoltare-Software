@@ -5,10 +5,3 @@ plugins {
     alias(libs.plugins.kotlin.compose) apply false
 }
 
-subprojects {
-    configurations.all {
-        resolutionStrategy {
-            force("org.jetbrains:annotations:23.0.0")
-        }
-    }
-}

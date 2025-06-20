@@ -23,7 +23,6 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         val start = fullText.indexOf("Click")
         val end = fullText.length
 
-        // Sublinează și face clickabil textul
         spannable.setSpan(UnderlineSpan(), start, end, 0)
         spannable.setSpan(object : ClickableSpan() {
             override fun onClick(widget: View) {
