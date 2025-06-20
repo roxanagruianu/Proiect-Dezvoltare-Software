@@ -5,15 +5,17 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.example.myapplication.MainFragment"
+        android:name="com.example.myapplication.ui.fragments.MainFragment"
         android:label="Main" />
+
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.myapplication.LoginFragment"
-        android:label="Login" />
+        android:name="com.example.myapplication.ui.fragments.LoginFragment"
+        android:label="Login" >
+    </fragment>
 
     <fragment
         android:id="@+id/registerFragment"
-        android:name="com.example.myapplication.RegisterFragment"
+        android:name="com.example.myapplication.ui.fragments.RegisterFragment"
         android:label="Register" />
 </navigation>
