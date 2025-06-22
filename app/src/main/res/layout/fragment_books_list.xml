@@ -5,10 +5,12 @@
     android:layout_height="match_parent"
     tools:context=".ui.fragments.BooksListFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="363dp"
+        android:layout_height="138dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="FRAGMENT BOOKS LIST, VA FI IMPLEMENTAT" />
 
 </FrameLayout>

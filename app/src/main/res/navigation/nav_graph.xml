@@ -23,4 +23,30 @@
         android:id="@+id/mainPageFragment"
         android:name="com.example.myapplication.ui.fragments.MainPageFragment"
         android:label="Main Page" />
+
+    <fragment
+        android:id="@+id/bookDetailsFragment"
+        android:name="com.example.myapplication.ui.fragments.BookDetailsFragment"
+        android:label="Book Details" />
+
+    <fragment
+        android:id="@+id/personalDataFragment"
+        android:name="com.example.myapplication.ui.fragments.PersonalDataFragment"
+        android:label="Personal Data" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.myapplication.ui.fragments.SettingsFragment"
+        android:label="Settings" />
+
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.myapplication.ui.fragments.ProfileFragment"
+        android:label="Profile" />
+
+    <fragment
+        android:id="@+id/booksListFragment"
+        android:name="com.example.myapplication.ui.fragments.BooksListFragment"
+        android:label="Books List" />
 </navigation>
