@@ -13,30 +13,30 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
 class MainPageFragment : Fragment(R.layout.fragment_main_page) {
+    private lateinit var bottomNavigationView: BottomNavigationView
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val bottomNavigationView = view?.findViewById<BottomNavigationView>(R.id.bottomNavigationView)
-        bottomNavigationView?.setOnItemSelectedListener { item ->
+        bottomNavigationView = view.findViewById(R.id.bottomNavigationView)
+
+        bottomNavigationView.setOnItemSelectedListener { item ->
             when (item.itemId) {
-                R.id.home -> {
-                    parentFragmentManager.beginTransaction()
-                        .replace(R.id.nav_host_fragment, MainPageFragment())
+                R.id.mainPageFragment -> {
+                    findNavController().navigate(R.id.mainPageFragment)
+                    true
+                }
+
+                R.id.booksListFragment -> {
+                    childFragmentManager.beginTransaction()
+                        .replace(R.id.fragment_container, BooksListFragment())
                         .commit()
                     true
                 }
 
-                R.id.books -> {
-                    parentFragmentManager.beginTransaction()
-                        .replace(R.id.nav_host_fragment, BooksListFragment())
-                        .commit()
-                    true
-                }
-
-                R.id.profile -> {
-                    parentFragmentManager.beginTransaction()
-                        .replace(R.id.nav_host_fragment, ProfileFragment())
+                R.id.profileFragment -> {
+                    childFragmentManager.beginTransaction()
+                        .replace(R.id.fragment_container, ProfileFragment())
                         .commit()
                     true
                 }
@@ -44,10 +44,6 @@ class MainPageFragment : Fragment(R.layout.fragment_main_page) {
                 else -> false
             }
         }
-
     }
-
-    //findNavController().navigate(R.id.mainPageFragment)
-
 
 }

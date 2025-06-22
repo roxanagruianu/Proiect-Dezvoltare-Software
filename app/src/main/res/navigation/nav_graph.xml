@@ -38,15 +38,4 @@
         android:id="@+id/settingsFragment"
         android:name="com.example.myapplication.ui.fragments.SettingsFragment"
         android:label="Settings" />
-
-
-    <fragment
-        android:id="@+id/profileFragment"
-        android:name="com.example.myapplication.ui.fragments.ProfileFragment"
-        android:label="Profile" />
-
-    <fragment
-        android:id="@+id/booksListFragment"
-        android:name="com.example.myapplication.ui.fragments.BooksListFragment"
-        android:label="Books List" />
 </navigation>

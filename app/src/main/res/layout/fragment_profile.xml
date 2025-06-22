@@ -1,15 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.fragments.ProfileFragment">
 
-    <EditText
-        android:id="@+id/editTextText"
-        android:layout_width="363dp"
-        android:layout_height="138dp"
-        android:ems="10"
-        android:inputType="text"
-        android:text="FRAGMENT PROFIL, VA FI IMPLEMENTAT" />
-</FrameLayout>
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="232dp"
+        android:src="@drawable/bookwormimage"
+        android:background="@color/app_blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="284dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="368dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="472dp"
+        android:background="@drawable/custom_button"
+        android:text="Date personale"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="284dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="487dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="353dp"
+        android:background="@drawable/custom_button"
+        android:text="Setari"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
