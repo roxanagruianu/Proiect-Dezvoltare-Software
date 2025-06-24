@@ -1,0 +1,23 @@
+package com.example.myapplication.data.model
+
+import androidx.room.Dao
+import androidx.room.Insert
+import androidx.room.Query
+import androidx.room.Transaction
+
+@Dao
+interface BorrowedBookDao {
+    @Insert
+    suspend fun insert(borrowedBook: BorrowedBookEntity)
+
+    @Query("SELECT * FROM borrowed_books WHERE userId = :userId")
+    suspend fun getBooksForUser(userId: Int): List<BorrowedBookEntity>
+
+    @Transaction
+    @Query("""
+        SELECT b.* FROM books b
+        INNER JOIN borrowed_books bb ON bb.bookId = b.id
+        WHERE bb.userId = :userId
+    """)
+    suspend fun getBorrowedBooksByUser(userId: Int): List<BookEntity>
+}
