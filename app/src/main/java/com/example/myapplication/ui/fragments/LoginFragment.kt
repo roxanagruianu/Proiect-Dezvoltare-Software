@@ -1,5 +1,6 @@
 package com.example.myapplication.ui.fragments
 
+import android.content.Context
 import android.os.Bundle
 import android.text.SpannableString
 import android.text.style.ClickableSpan
@@ -72,6 +73,10 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.loginEvent.collectLatest { user ->
                 if (user != null) {
+                    val prefs = requireContext().getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
+                    prefs.edit()
+                        .putString("logged_in_email", user.email)
+                        .apply()
                     Toast.makeText(requireContext(), "Bine ai venit, ${user.firstName}", Toast.LENGTH_LONG).show()
                     findNavController().navigate(R.id.mainPageFragment)
                 } else {
