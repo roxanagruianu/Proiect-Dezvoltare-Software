@@ -15,7 +15,6 @@ import android.widget.EditText
 import androidx.navigation.findNavController
 import com.example.myapplication.R
 import com.example.myapplication.data.model.UserDatabase
-import com.example.myapplication.data.model.UserEntity
 import com.example.myapplication.data.model.UserRepository
 import com.example.myapplication.viewModel.UserViewModel
 import com.example.myapplication.viewModel.UserViewModelFactory

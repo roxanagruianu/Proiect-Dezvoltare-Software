@@ -38,4 +38,7 @@
         android:id="@+id/settingsFragment"
         android:name="com.example.myapplication.ui.fragments.SettingsFragment"
         android:label="Settings" />
+
+
+
 </navigation>

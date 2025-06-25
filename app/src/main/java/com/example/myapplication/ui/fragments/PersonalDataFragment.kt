@@ -5,19 +5,16 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.myapplication.R
 import com.example.myapplication.data.model.UserDatabase
 import com.example.myapplication.data.model.UserRepository
 import com.example.myapplication.databinding.FragmentPersonalDataBinding
-import com.example.myapplication.databinding.FragmentProfileBinding
 import com.example.myapplication.viewModel.UserViewModel
 import com.example.myapplication.viewModel.UserViewModelFactory
 
-class PersonalDataFragment : Fragment(R.layout.fragment_personal_data) {
+class  PersonalDataFragment : Fragment(R.layout.fragment_personal_data) {
     private var _binding: FragmentPersonalDataBinding? = null
     private val binding get() = _binding!!
     private lateinit var viewModel: UserViewModel

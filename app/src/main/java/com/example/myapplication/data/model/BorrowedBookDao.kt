@@ -2,13 +2,14 @@ package com.example.myapplication.data.model
 
 import androidx.room.Dao
 import androidx.room.Insert
+import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Transaction
 
 @Dao
 interface BorrowedBookDao {
-    @Insert
-    suspend fun insert(borrowedBook: BorrowedBookEntity)
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertBorrowedBook(borrowedBook: BorrowedBookEntity)
 
     @Query("SELECT * FROM borrowed_books WHERE userId = :userId")
     suspend fun getBooksForUser(userId: Int): List<BorrowedBookEntity>

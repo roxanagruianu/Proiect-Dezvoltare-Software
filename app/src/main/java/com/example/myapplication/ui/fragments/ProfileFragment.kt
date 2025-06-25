@@ -4,9 +4,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import com.example.myapplication.R
-import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
 class ProfileFragment : Fragment(R.layout.fragment_profile){

@@ -16,14 +16,7 @@ class BookViewModel(private val repository: BookRepository) : ViewModel() {
         }
     }
 
-    fun getAllBooks() {
-        viewModelScope.launch {
-            val books = repository.getAllBooks()
-            books.forEach {
-                Log.d("BookList", "Carte: ${it.title} de ${it.author} - ${it.description}")
-            }
-        }
-    }
+    val allBooks: LiveData<List<BookEntity>> = repository.allBooks
 
     fun deleteBookById(bookId: Int) {
         viewModelScope.launch {
