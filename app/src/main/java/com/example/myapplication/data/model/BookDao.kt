@@ -21,6 +21,9 @@ interface BookDao {
     @Query("SELECT * FROM books WHERE title = :title AND author = :author LIMIT 1")
     suspend fun getBookByTitleAndAuthor(title: String, author: String): BookEntity?
 
+    @Query("SELECT * FROM books WHERE id = :bookId LIMIT 1")
+    suspend fun getBookById(bookId: Int): BookEntity?
+
     @Transaction
     @Query("""
         SELECT b.* FROM books b

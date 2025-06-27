@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Când butonul este apăsat -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/app_cyan" />
+            <stroke android:width="2dp" android:color="@color/app_cyan" />
+            <corners android:radius="30dp" />
+        </shape>
+    </item>
+
+    <!-- Când este inactiv (default) -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/white" />
+            <stroke android:width="2dp" android:color="@color/app_cyan" />
+            <corners android:radius="30dp" />
+        </shape>
+    </item>
+</selector>
+

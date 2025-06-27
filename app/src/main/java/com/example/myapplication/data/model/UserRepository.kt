@@ -21,4 +21,8 @@ class UserRepository(private val userDao: UserDao) {
     suspend fun getUserByEmail(email: String): UserEntity? {
         return userDao.getUserByEmail(email)
     }
+
+    suspend fun deleteByEmail(email: String) {
+        userDao.deleteByEmail(email)
+    }
 }

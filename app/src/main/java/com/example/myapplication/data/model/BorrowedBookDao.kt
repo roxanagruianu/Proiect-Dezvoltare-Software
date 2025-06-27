@@ -5,6 +5,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Transaction
+import androidx.room.Update
 
 @Dao
 interface BorrowedBookDao {
@@ -21,4 +22,10 @@ interface BorrowedBookDao {
         WHERE bb.userId = :userId
     """)
     suspend fun getBorrowedBooksByUser(userId: Int): List<BookEntity>
+
+    @Update
+    suspend fun updateBorrowedBook(borrowedBook: BorrowedBookEntity)
+
+    @Query("SELECT * FROM borrowed_books WHERE userId = :userId")
+    suspend fun getBorrowedBooksByUserDi(userId: Int): List<BorrowedBookEntity>
 }

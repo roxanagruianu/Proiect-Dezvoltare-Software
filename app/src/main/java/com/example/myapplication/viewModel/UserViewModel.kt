@@ -37,4 +37,10 @@ class UserViewModel(private val repository: UserRepository) : ViewModel() {
             _currentUser.postValue(user)
         }
     }
+
+    fun deleteAccount(email: String) {
+        viewModelScope.launch {
+            repository.deleteByEmail(email)
+        }
+    }
 }

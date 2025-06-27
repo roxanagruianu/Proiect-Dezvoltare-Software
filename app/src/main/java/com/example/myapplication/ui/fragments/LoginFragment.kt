@@ -76,7 +76,6 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
                     prefs.edit()
                         .putString("logged_in_email", user.email)
                         .apply()
-                    Toast.makeText(requireContext(), "Bine ai venit, ${user.firstName}", Toast.LENGTH_LONG).show()
                     findNavController().navigate(R.id.mainPageFragment)
                 } else {
                     Toast.makeText(requireContext(), "Date incorecte", Toast.LENGTH_SHORT).show()

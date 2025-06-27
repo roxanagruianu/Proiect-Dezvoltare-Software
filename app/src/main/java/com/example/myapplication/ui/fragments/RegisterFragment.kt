@@ -54,6 +54,7 @@ class RegisterFragment : Fragment(R.layout.fragment_register) {
         val lastNameInput = view.findViewById<EditText>(R.id.editTextRegisterLastName)
         val emailInput = view.findViewById<EditText>(R.id.editTextRegisterEmailAddress)
         val passwordInput = view.findViewById<EditText>(R.id.editTextRegisterPassword)
+        val passwordInput2 = view.findViewById<EditText>(R.id.editTextTextPassword2)
         val registerButton = view.findViewById<Button>(R.id.registerButton)
 
         registerButton.setOnClickListener {
@@ -64,6 +65,19 @@ class RegisterFragment : Fragment(R.layout.fragment_register) {
 
             if (firstName.isBlank() || lastName.isBlank() || email.isBlank() || password.isBlank()) {
                 Toast.makeText(requireContext(), "Toate câmpurile sunt obligatorii", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                Toast.makeText(requireContext(), "Adresa de email nu este validă", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            val password1 = passwordInput.text.toString().trim()
+            val password2 = passwordInput2.text.toString().trim()
+
+            if (password1 != password2) {
+                Toast.makeText(requireContext(), "Parolele nu coincid", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
