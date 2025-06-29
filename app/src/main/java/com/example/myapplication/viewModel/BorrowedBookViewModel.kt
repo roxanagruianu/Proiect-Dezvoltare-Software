@@ -34,7 +34,7 @@ class BorrowedBookViewModel(private val repository: BorrowedBookRepository,
     fun loadBorrowedBooks(email: String) {
         viewModelScope.launch {
             val user = userRepository.getUserByEmail(email) ?: return@launch
-            val borrowedEntities = repository.getBorrowedBooksForUser(user.id) // asta e List<BorrowedBookEntity>
+            val borrowedEntities = repository.getBorrowedBooksForUser(user.id) 
 
             val borrowedBooksDisplay = borrowedEntities.mapNotNull { borrowedEntity ->
                 val book = bookDao.getBookById(borrowedEntity.bookId) ?: return@mapNotNull null
@@ -42,7 +42,7 @@ class BorrowedBookViewModel(private val repository: BorrowedBookRepository,
                 BorrowedBookDisplay(
                     title = book.title,
                     author = book.author,
-                    borrowedAt = borrowedEntity.borrowedAt  // folosești aici valoarea corectă!
+                    borrowedAt = borrowedEntity.borrowedAt  
                 )
             }
 
